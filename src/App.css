@@ -1,0 +1,82 @@
+.paper {
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+	width: 75vw;
+    margin: auto;
+	
+}
+h1 {
+    margin: 0;
+    color: white;
+    padding: 5rem;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: inherit;
+}
+aside {
+	padding: 1rem;
+	color: #666666;
+	
+}
+ul {
+margin: 0;
+padding: 0;
+}
+button {
+font-size: inherit;
+margin: auto 0 auto auto;
+border: 0;
+background: 0;
+color: whitesmoke;
+}
+button:hover {
+	color: red;
+}
+li{
+	display: flex;
+	list-style-type: none;
+	width: 100%;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 3px solid #e1e1e1;
+    box-sizing: border-box;
+	padding: 2rem 5rem;
+	color: #141414!important;
+	 font-weight: 100!important;
+
+}
+input{
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	width: 100%;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 3px solid #e1e1e1;
+    box-sizing: border-box;
+	padding: 2rem 5rem;
+	color: #141414;
+}
+
+input:focus{outline: none;}
+
+::placeholder {
+font-family: 'Roboto', sans-serif;
+color: #afafaf;
+opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
