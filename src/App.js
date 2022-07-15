@@ -16,10 +16,6 @@ const App = () => {
       .catch((err) => console.log("Error"));
   };
 
-  useEffect(() => {
-    load();
-  }, []);
-
   const sync = async (dat) => {
     fetch(url, {
       method: "PUT",
@@ -32,6 +28,19 @@ const App = () => {
         console.log("Fetch Sync: ", dat);
       })
       .catch((err) => console.log("Error"));
+  };
+
+  useEffect(() => {
+    load();
+  }, []);
+
+  const keyup = (event) => {
+    if (event.key === "Enter") {
+      setInputValue("");
+      if (inputValue !== "") {
+        sync([...list, { label: inputValue, done: false }]);
+      }
+    }
   };
 
   const handleRemoveItem = (index) => {
@@ -54,14 +63,6 @@ const App = () => {
     );
   };
 
-  const keyup = (event) => {
-    if (event.key === "Enter") {
-      setInputValue("");
-      if (inputValue !== "") {
-        sync([...list, { label: inputValue, done: false }]);
-      }
-    }
-  };
   return (
     <article className="paper">
       <input
