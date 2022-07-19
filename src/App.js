@@ -34,7 +34,7 @@ const App = () => {
     load();
   }, []);
 
-  const keyup = (event) => {
+  const keyHandle = (event) => {
     if (event.key === "Enter") {
       setInputValue("");
       if (inputValue !== "") {
@@ -67,7 +67,7 @@ const App = () => {
     <article className="paper">
       <input
         type="text"
-        onKeyUp={keyup}
+        onKeyUp={keyHandle}
         onChange={(e) => setInputValue(e.target.value)}
         value={inputValue}
         placeholder="What needs to be done?"
